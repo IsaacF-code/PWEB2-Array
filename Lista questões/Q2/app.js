@@ -8,4 +8,12 @@ function MaiorQueZero(value) {
 
 let positivos = arr1.filter(MaiorQueZero);
 
-document.write(positivos);
+let soma = positivos.reduce(function (soma, i) {
+    return soma + i;
+});
+
+document.write("Array original: " + arr1.join(', '));
+document.write("<br>");
+document.write("Array com apenas os números positivos: " + positivos.join(', '));
+document.write("<br>");
+document.write("Soma dos números positivos: " + soma);
